@@ -1,14 +1,23 @@
+/* Common styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
     font-family: 'Abel', sans-serif;
     color: #333;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
 header {
     background: linear-gradient(90deg, #0244A1, #047FC5);
     padding: 15px 0;
@@ -21,10 +30,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
-    width: 250px;
+    width: 200px;
 }
 
 .top-nav {
@@ -44,20 +54,12 @@ header {
     align-items: center;
 }
 
-.top-nav aa {
-    color: #4649ff;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
 .lock-icon {
     width: 15px;
     margin-right: 5px;
 }
 
-.login {
+.login a {
     background-color: #fff;
     color: #0056a1;
     padding: 5px 10px;
@@ -91,22 +93,28 @@ header {
     font-size: x-large;
 }
 
-.hero {
-    background-color: #f8f8f8;
-    padding: 0;
-    margin-top: -5px;
+main {
+    flex: 1; /* Ensures the main content area takes up remaining space */
 }
 
-.hero-image img {
+/* Desktop-only images */
+.desktop-only {
+    display: block; /* Visible only on desktop view */
+    height: auto;
     width: 100%;
-    display: block;
-    border-radius: 0;
 }
 
+/* Mobile-only images */
+.mobile-only {
+    display: none; /* Hide by default, only show in mobile view */
+}
+
+/* Footer Styles */
 footer {
     background: linear-gradient(90deg, #0244A1, #047FC5);
     color: #fff;
     padding: 20px 0;
+    width: 100%;
 }
 
 footer .container {
@@ -134,30 +142,51 @@ footer .container {
     font-size: 14px;
 }
 
-/* Responsive Design */
+/* Media Query for Mobile View */
 @media (max-width: 768px) {
+    .desktop-only {
+        display: none; /* Hide desktop images in mobile view */
+    }
+
+    .mobile-only {
+        display: block; /* Show mobile images */
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    .bottom-nav-container, 
+    .login {
+        display: none; /* Hide the bottom nav and login in mobile view */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 250px;
+        margin-bottom: 10px;
+        order: 1;
+    }
+
     .top-nav {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
     }
 
-    .bottom-nav {
-        justify-content: center;
+    .top-nav li:nth-child(1) {
+        text-align: left; /* Align "About Us" to the left */
     }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
+    .top-nav li:nth-child(2) {
+        text-align: right; /* Align "Help & Support" to the right */
     }
 
-    .bottom-nav ul {
-        flex-direction: column;
-        align-items: center;
+    .top-nav li:nth-child(3) {
+        display: none; /* Hide login link on mobile */
     }
-}
-
-.abel-regular {
-    font-family: 'Abel', sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }

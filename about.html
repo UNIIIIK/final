@@ -13,12 +13,13 @@
     <header>
         <div class="container">
             <a href="index.html">
-            <img src="assets/metro.png" alt="Metrobank Logo" class="logo">
+                <img src="assets/metro.png" alt="Metrobank Logo" class="logo">
+            </a>
             <nav>
                 <ul class="top-nav abel-regular">
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="#">Help & Support</a></li>
-                    <li><aa href="#" class="login"><img src="assets/lock.png" alt="lock icon" class="lock-icon"> Login</a></li>
+                    <li class="login"><a href="#"><img src="assets/lock.png" alt="lock icon" class="lock-icon"> Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,10 +35,14 @@
         </nav>
     </div>
     <main>
-        <section class="hero">
-            <div class="hero-image">
-                <img src="assets/about.png" alt="About Us Image">
-            </div>
+        <section class="about-content">
+            <!-- This image is visible only on desktop view -->
+            <img src="assets/about.png" alt="About us image" class="desktop-only">
+
+            <!-- These images are only visible on mobile view -->
+            <img src="assets/abut.png" alt="Mobile About Us Image 1" class="mobile-only">
+            <img src="assets/abut1.png" alt="Mobile About Us Image 2" class="mobile-only">
+            <img src="assets/abut2.png" alt="Mobile About Us Image 3" class="mobile-only">
         </section>
     </main>
     <footer>
