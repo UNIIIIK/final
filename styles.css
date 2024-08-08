@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #0244A1, #047FC5);
+    padding: 15px 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 250px;
+}
+
+.top-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav li {
+    list-style: none;
+}
+
+.top-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.top-nav aa {
+    color: #4649ff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.lock-icon {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.login {
+    background-color: #fff;
+    color: #0056a1;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.bottom-nav-container {
+    background-color: #f8f8f8;
+    border-bottom: 5px solid #f8f8f8;
+    padding: 25px 0;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    margin-left: 10%;
+}
+
+.bottom-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.bottom-nav a {
+    color: #0244A1;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.hero {
+    background-color: #f8f8f8;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+}
+
+footer {
+    background: linear-gradient(90deg, #0244A1, #047FC5);
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-media p {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 30px;
+}
+
+.contact-info {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-nav {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bottom-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.abel-regular {
+    font-family: 'Abel', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
